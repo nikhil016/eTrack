@@ -1,0 +1,58 @@
+    .box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        /* background-color: #f9f9f9; */
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .row {
+        margin-bottom: 10px;
+    }
+
+    .col-md-2 {
+        width: calc(16.666% - 10px);
+        float: left;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /* Clearfix for Bootstrap columns */
+    .clearfix:before,
+    .clearfix:after {
+        content: " ";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+
+    box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .bold {
+        font-weight: bold;
+    }

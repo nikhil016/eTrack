@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    
+  }
+  
+  .container-content {
+    /* Add any additional styling for the container content */
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 15px;
+    height: 300px;
+    width: 550px;
+    background-color: white;
+  }
+ 
+  body{
+    background-color: lightgrey;
+  }

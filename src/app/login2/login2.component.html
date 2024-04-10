@@ -1,0 +1,87 @@
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <!-- <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                      </div>
+                  </div> -->
+                  <div class="form-group">
+                      <label>Email : </label>
+                      <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                          <div *ngIf="f.email.errors.required">Email is required</div>
+                          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                      </div>
+                  </div>
+                  <div class="form-group" *ngIf="!useSonumber">
+                    <label>PO Number : </label>
+                    <input type="text" formControlName="ponumber"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ponumber.errors }" />
+                    <div *ngIf="submitted && f.ponumber.errors" class="invalid-feedback">
+                        <div *ngIf="f.ponumber.errors.minlength">PO Number  must be at least 6 characters</div>
+                    </div>
+                </div>
+                  <br/>
+                  <div class="form-group" *ngIf="useSonumber">
+                    <label>SO Number : </label>
+                    <input type="text" formControlName="sonumber" (change)="toggleField()" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sonumber.errors }" />
+                    <div *ngIf="submitted && f.sonumber.errors"   class="invalid-feedback">
+                        <div *ngIf="f.sonumber.errors.minlength">SO Number must be at least 6 characters</div>
+                    </div>
+                </div>
+                <br/> 
+                  <div class="form-group row center col-md-12" style="margin-left: 50px;" >
+                      <button class="btn btn-primary col-md-3" style="margin: 2px;"  >Login</button>
+                      <button class="btn btn-warning col-md-3"  style="margin: 2px;"  (click)="onCancel()" type="button">Clear</button>
+                      <input type="button" (click)="toggleField()"  style="margin: 2px;"  class="btn btn-warning col-md-3"  [value]="useSOText" />
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" #myModal>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #e5150d;
+      border: 1px solid;
+      padding: 10px;
+      color: white;">
+        <h5 class="modal-title " >Information</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+       <div>
+        <p>   No record can be found at this time, please try again later.
+          <br>
+          </p>
+          <p>
+          For further assistance, please contact
+          <a href=" https://www.agilent.com/en/contact-us/page"> Customer Service.</a></p>
+        <br>
+        
+       </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

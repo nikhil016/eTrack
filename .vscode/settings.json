@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/2c8e14e1-ce43-4aaf-bb29-aac8239591a9/resourceGroups/eTrackUnityResource/providers/Microsoft.Web/sites/eTrackUnity",
+    "appService.deploySubpath": "dist"
+}

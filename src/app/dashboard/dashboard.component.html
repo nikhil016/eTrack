@@ -1,0 +1,44 @@
+<br>
+<div class="col-md-11 row">
+    <div class=" container box left">
+        <!-- <fa-icon ></fa-icon> -->
+          <table>
+            <tr>
+                <td class="bold">P0 Number</td>
+                <td>ALS533787
+                </td>
+                <td class="bold">Agilent SO Number</td>
+                <td>314914605
+                </td>
+           
+                <td class="bold">Order Placed on Date</td>
+                <td>01.07.2024</td>
+                <td class="bold">Shipping Address</td>
+                <td>Birla Aurora, Level 21, 
+                    Plot No. 1080</td>
+                <td class="">
+                    <input type="button" value="Export" class="btn btn-primary" (click)="ExportToExcel()" >
+                </td>
+                <td>       <a   class="btn btn-primary"href="https://docs.google.com/forms/d/e/1FAIpQLScX10zljJlC7RSz_9nThovsFJWayVxWPD-3Gekk31qD7pOhSQ/viewform?usp=sf_link" target="_blank">Raise a Query</a>
+                </td>
+                <td class=""></td>
+                <td>     <a   class="btn btn-primary"href="https://docs.google.com/forms/d/e/1FAIpQLScX10zljJlC7RSz_9nThovsFJWayVxWPD-3Gekk31qD7pOhSQ/viewform?usp=sf_link" target="_blank">E-Invoice</a>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+   
+</div>
+<br>
+<div class="row col-md-12 ">
+
+    <div class="">
+        <ag-grid-angular style="width: 2000px; height: 600px;margin-left: 20px;" class="ag-theme-quartz"
+            [rowData]="rowData" [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+</div>
+
+<!-- <ag-grid-angular
+    [columnDefs]="columnDefs"></ag-grid-angular> -->
